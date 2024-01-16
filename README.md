@@ -15,3 +15,4 @@ DigitalOcean [Tutorial](https://www.digitalocean.com/community/tutorials/how-to-
 ### deadline branch
 
 - context.WithDeadline
+- context.WithTimeout
