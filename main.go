@@ -7,11 +7,7 @@ import (
 )
 
 func doSomething(ctx context.Context) {
-	// ctx, cancelCtx := context.WithCancel(ctx)
-
-	deadline := time.Now().Add(1500 * time.Millisecond)
-	ctx, cancelCtx := context.WithDeadline(ctx, deadline)
-	defer cancelCtx()
+	ctx, cancelCtx := context.WithCancel(ctx)
 
 	printCh := make(chan int)
 	go doAnother(ctx, printCh)
